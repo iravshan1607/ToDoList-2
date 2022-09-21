@@ -1,0 +1,140 @@
+body {
+  margin: 200px 0 auto;
+  background-color: #4e5053;
+  color: #fff;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-input {
+  width: 70%;
+  background-color: #313234;
+  color: #fff;
+  padding: 10px;
+  border-radius: 32px;
+  margin-left: 16px;
+}
+
+#new-input::placeholder {
+  color: #fff;
+}
+
+#new-submit {
+  font-size: 28px;
+  background-image: linear-gradient(
+    to right,
+    (rgb(0, 225, 255)),
+    (rgb(31, 2, 255))
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#new-submit:hover {
+  opacity: 0.8;
+}
+
+#new-submit:active {
+  opacity: 0.6;
+}
+
+.main-section {
+  position: -webkit-sticky;
+  overflow: -moz-hidden-unscrollable;
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 16px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+}
+
+#tasks .task {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #313234;
+  padding: 15px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+
+  .content {
+    flex: 1 1 0%;
+
+    .text {
+      color: rgb(255, 255, 255);
+      font-size: 24px;
+      width: 100%;
+      display: block;
+      transition: 0.3s;
+    }
+  }
+}
+
+#tasks .task .content .text:not(:read-only) {
+  color: rgb(237, 18, 18);
+}
+
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  background-image: linear-gradient(to right, #4aff4d, #35fffc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+  color: crimson;
+}
